@@ -15,21 +15,45 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.primary.main,
         flex: '0 0 50%',
         position: 'relative',
+        overflow: 'hidden',
+        display: 'flex',
+        alignItems: 'center',
         '&:before': {
             content: "''",
-            width: 300,
-            height: 300,
-            transform: 'rotate(33deg)',
+            width: '90%',
+            height: '90%',
+            transform: 'translate(-50%, -50%) rotate(35deg)',
             backgroundColor: theme.palette.primary.dark,
-            left: -70,
-            top: -80,
+            left: '50%',
+            top: '50%',
             position: 'absolute',
-            borderRadius: '0 20px 100px 0'
         },
-        '& ul': {
-            zIndex: 2,
-            position: 'relative',
-            listStyle: 'none'
+        '&:after': {
+            content: "''",
+            width: '90%',
+            height: '90%',
+            transform: 'translate(-50%, -50%) rotate(75deg)',
+            backgroundColor: theme.palette.primary.dark,
+            left: '50%',
+            top: '50%',
+            position: 'absolute',
+            border: `5px solid ${theme.palette.primary.main}`
+        },
+    },
+    redBlockInfo: {
+        zIndex: 2,
+        position: 'relative',
+        listStyle: 'none',
+        '& li': {
+            display: 'flex',
+            alignItems: 'center',
+            margin: '20px 0',
+            '& svg': {
+                marginRight: 10
+            },
+            '& p': {
+                fontSize: 16,
+            }
         }
     },
     signInBlock: {
@@ -37,14 +61,24 @@ const useStyles = makeStyles((theme) => ({
         flex: 1,
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center'
     },
-    signInBlockWrapper: {},
-    logo: {
+    signInBlockWrapper: {
+        width: 380,
+        '& p': {
+            marginBottom: 10
+        }
+    },
+    signInLogo: {
         width: '100%',
         textAlign: 'center',
         '& > img': {
             width: 50
         }
+    },
+    signInTitle: {
+        fontWeight: 600,
+        margin: '20px 0 50px'
     },
     button: {
         fontWeight: 700
