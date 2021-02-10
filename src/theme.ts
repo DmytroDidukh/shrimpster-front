@@ -17,6 +17,7 @@ const theme = createMuiTheme({
         ],
     },
     palette: {
+        type: "dark",
         primary: {
             main: '#BC4123',
             dark: '#a53014',
@@ -57,7 +58,7 @@ const theme = createMuiTheme({
                     borderBottomWidth: '2px'
                 },
                 '&:before': {
-                    borderColor: '#000',
+                    borderColor: '#fff',
                     borderBottomWidth: '2px'
                 },
             },
@@ -68,6 +69,8 @@ const theme = createMuiTheme({
         MuiDialog: {
             paper: {
                 borderRadius: 15,
+                backgroundColor: '#0B172A',
+                color: '#fff'
             },
         },
         MuiDialogActions: {

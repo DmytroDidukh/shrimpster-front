@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
     signInLogo: {
         width: '100%',
         textAlign: 'center',
-        '& > img': {
+        '& img': {
             width: 50
         }
     },
