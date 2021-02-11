@@ -24,13 +24,14 @@ const theme = createMuiTheme({
             contrastText: '#fff'
         },
         secondary: {
-            main: '#463940'
+            main: '#0B172A'
         },
         error: {
             main: red.A400
         },
         background: {
-            default: '#0B172A'
+            default: '#0B172A',
+            darken: '#09172a'
         }
     },
     shadows: [],
@@ -80,7 +81,7 @@ const theme = createMuiTheme({
         MuiListItemIcon: {
             root: {
                 color: 'inherit',
-                minWidth: 40
+                minWidth: 35
             }
         },
         MuiFilledInput: {
@@ -124,7 +125,7 @@ const theme = createMuiTheme({
                     marginRight: 20
                 }
             }
-        }
+        },
     }
 })
 

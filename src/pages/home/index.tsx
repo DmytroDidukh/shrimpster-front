@@ -1,14 +1,14 @@
 import React from 'react'
-import {Grid} from "@material-ui/core";
+import {Grid, Container} from "@material-ui/core";
 
-import {Navbar} from "../../containers";
+import {Navbar, Sidebar} from "../../containers";
 import homeStyles from './styles'
 
 const Home = () => {
     const classes = homeStyles()
 
     return (
-        <section className={classes.homeWrapper}>
+        <Container maxWidth="lg" className={classes.homeWrapper}>
             <Grid container spacing={3}>
                 <Grid item xs={2}>
                     <Navbar/>
@@ -17,10 +17,10 @@ const Home = () => {
                     middle
                 </Grid>
                 <Grid item xs={3}>
-                    right
+                    <Sidebar/>
                 </Grid>
             </Grid>
-        </section>
+        </Container>
     )
 }
 
