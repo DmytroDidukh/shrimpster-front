@@ -1,9 +1,13 @@
 import React from "react";
-import Dialog from "@material-ui/core/Dialog";
-import DialogContent from "@material-ui/core/DialogContent";
-import TextField from '@material-ui/core/TextField';
-import DialogActions from "@material-ui/core/DialogActions";
-import {Button, Typography} from "@material-ui/core";
+import {
+    Button,
+    Typography,
+    FormGroup,
+    DialogActions,
+    TextField,
+    DialogContent,
+    Dialog
+} from "@material-ui/core";
 import ClearIcon from '@material-ui/icons/Clear';
 
 import RegisterDialogStyles from "./styles";
@@ -25,19 +29,17 @@ const LoginDialog = ({open, handleClose}) => {
                     <img src="https://i.imgur.com/YJookK1.png" alt="Shrimpster"/>
                 </div>
                 <Typography variant="h6">Login to Shrimpster</Typography>
-                <form className={classes.dialogForm}>
-                    <TextField id="outlined-basic" label="Name"
-                               variant="outlined" className={classes.dialogInput}/>
-                    <TextField id="outlined-basic" label="Phone"
-                               variant="outlined" className={classes.dialogInput}/>
-                </form>
+                <FormGroup className={classes.dialogForm}>
+                    <TextField id="standard-basic" label="Email" type='email'
+                               className={classes.dialogInput}/>
+                    <TextField id="standard-basic" label="Password" type='password'
+                               className={classes.dialogInput}/>
+                </FormGroup>
             </DialogContent>
             <DialogActions>
-                <Button onClick={handleClose} color="primary">
-                    Disagree
-                </Button>
-                <Button onClick={handleClose} color="primary" autoFocus>
-                    Agree
+                <Button onClick={handleClose} variant="contained" color="primary"
+                        autoFocus fullWidth>
+                    Login
                 </Button>
             </DialogActions>
         </Dialog>

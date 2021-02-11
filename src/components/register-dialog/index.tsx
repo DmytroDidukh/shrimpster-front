@@ -33,10 +33,10 @@ const RegisterDialog = ({open, handleClose}) => {
                 </div>
                 <Typography variant="h6">Create your account</Typography>
                 <form className={classes.dialogForm}>
-                    <TextField id="outlined-basic" label="Name"
-                               variant="outlined" className={classes.dialogInput}/>
-                    <TextField id="outlined-basic" label="Phone"
-                               variant="outlined" className={classes.dialogInput}/>
+                    <TextField id="standard-basic" label="Name"
+                               className={classes.dialogInput}/>
+                    <TextField id="standard-basic" label="Phone"
+                               className={classes.dialogInput}/>
                 </form>
             </DialogContent>
             <DialogActions>

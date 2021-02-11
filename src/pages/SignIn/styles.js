@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
         overflow: 'hidden',
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center',
         '&:before': {
             content: "''",
             width: '90%',
@@ -80,13 +81,21 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 600,
         margin: '20px 0 50px'
     },
+    dialogInput: {
+        width: '100%',
+        margin: '5px 0'
+    },
     button: {
         fontWeight: 700
     },
     lightBulb: {
         verticalAlign: 'middle',
         marginRight: theme.spacing(1)
-    }
+    },
+    formControl: {
+        margin: theme.spacing(1),
+        minWidth: 120,
+    },
 }))
 
 export default useStyles
