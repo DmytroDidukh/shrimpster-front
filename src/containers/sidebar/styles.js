@@ -3,6 +3,7 @@ import {makeStyles} from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
     sidebar: {
         height: '100%',
+        padding: '12px'
     },
     searchField: {
         backgroundColor: theme.palette.primary.main,

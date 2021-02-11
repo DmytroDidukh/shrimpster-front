@@ -3,6 +3,7 @@ import {makeStyles} from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
     navbarList: {
         minWidth: 'fit-content',
+        padding: 12,
         '& .MuiButtonBase-root': {
             borderRadius: 30,
             width: 'fit-content',

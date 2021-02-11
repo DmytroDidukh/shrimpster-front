@@ -31,11 +31,29 @@ const theme = createMuiTheme({
         },
         background: {
             default: '#0B172A',
-            darken: '#09172a'
+            lighten: '#0f4a8a',
+            darken: '#010915'
         }
     },
     shadows: [],
     overrides: {
+        MuiGrid: {
+            'spacing-xs-2': {
+                margin: 0
+            },
+            'spacing-xs-3': {
+                margin: 0
+            }
+        },
+        MuiPaper: {
+            root: {
+                backgroundColor: '#0B172A',
+                padding: '12px',
+                margin: '10px 0',
+                boxShadow: '0px 0px 19px 6px #bc412329',
+            },
+        },
+
         MuiButton: {
             root: {
                 borderRadius: 30,

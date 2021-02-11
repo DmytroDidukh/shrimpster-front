@@ -1,7 +1,7 @@
 import React from 'react'
 import {Grid, Container} from "@material-ui/core";
 
-import {Navbar, Sidebar} from "../../containers";
+import {Main, Navbar, Sidebar} from "../../containers";
 import homeStyles from './styles'
 
 const Home = () => {
@@ -9,12 +9,12 @@ const Home = () => {
 
     return (
         <Container maxWidth="lg" className={classes.homeWrapper}>
-            <Grid container spacing={3}>
+            <Grid container>
                 <Grid item xs={2}>
                     <Navbar/>
                 </Grid>
                 <Grid item xs={7}>
-                    middle
+                    <Main/>
                 </Grid>
                 <Grid item xs={3}>
                     <Sidebar/>
