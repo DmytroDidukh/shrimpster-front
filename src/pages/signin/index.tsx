@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {FC, ReactElement, useState} from "react";
 import {Button, FormGroup, TextField, Typography, FormControl, InputLabel, MenuItem, Select} from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
@@ -6,15 +6,16 @@ import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 
 import Modal from "../../components/Modal";
 import {MONTHS_DATA} from "../../config";
-import SignInStyles from './styles'
+import signInStyles from './styles'
 
-const SignIn = () => {
+
+const SignIn: FC = (): ReactElement => {
     const [openDialog, setOpenDialog] = useState<'SignIn' | 'SignUp' | undefined>(undefined);
     const [day, setDay] = useState('');
     const [month, setMonth] = useState('');
     const [year, setYear] = useState('');
 
-    const classes = SignInStyles()
+    const classes = signInStyles()
 
 
     const handleClickOpenRegisterDialog = () => {

@@ -52,6 +52,37 @@ const theme = createMuiTheme({
                 borderColor: '#BC4123'
             }
         },
+        MuiIconButton: {
+            root: {
+                '&:hover': {
+                    backgroundColor: 'rgba(188,65,45,0.2)',
+                    color: '#BC4123'
+                }
+            }
+        },
+        MuiButtonBase: {
+            root: {
+                color: '#fff',
+                '&:hover': {
+                    backgroundColor: 'rgba(188,65,45,0.2)',
+                    color: '#BC4123',
+                }
+            }
+        },
+        MuiListItem: {
+            button: {
+                '&:hover': {
+                    backgroundColor: 'rgba(188,65,45,0.2)',
+                    color: '#BC4123',
+                }
+            }
+        },
+        MuiListItemIcon: {
+            root: {
+                color: 'inherit',
+                minWidth: 40
+            }
+        },
         MuiFilledInput: {
             underline: {
                 '&:after': {
