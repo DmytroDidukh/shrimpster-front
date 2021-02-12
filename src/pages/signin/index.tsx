@@ -153,7 +153,4 @@ const SignIn: FC = (): ReactElement => {
     )
 }
 
-//TODO Video: https://www.youtube.com/watch?v=0WOsVcbWX7k&list=PL0FGkDGJQjJF7MEJ353NX8ou8comQ4KwO&index=2&ab_channel=ArchakovBlog
-// Time: 1:26:18
-
 export default SignIn
