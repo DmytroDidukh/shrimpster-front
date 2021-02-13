@@ -4,7 +4,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 
-import Modal from "../../components/Modal";
+import Modal from "../../components/modal";
 import {MONTHS_DATA} from "../../config";
 import signInStyles from './styles'
 

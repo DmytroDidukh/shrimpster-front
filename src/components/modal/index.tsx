@@ -1,7 +1,7 @@
 import React, {FC, ReactNode, ReactElement} from "react";
 import {Button, Dialog, DialogActions, DialogTitle, DialogContent, Typography} from "@material-ui/core";
 import ClearIcon from "@material-ui/icons/Clear";
-import dialogStyles from "./styles";
+import modalStyles from "./styles";
 
 interface ModalProps {
     children: ReactNode,
@@ -12,7 +12,7 @@ interface ModalProps {
 }
 
 const Modal: FC<ModalProps> = ({open, handleClose, title, buttonTitle, children}): ReactElement => {
-    const classes = dialogStyles()
+    const classes = modalStyles()
 
     return (
         <Dialog
