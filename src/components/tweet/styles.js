@@ -13,18 +13,36 @@ const useStyles = makeStyles((theme) => ({
     },
     tweetHeader: {
         display: 'flex',
-    },
-    tweetAuthorName: {},
-    tweetAuthorNickname: {
         color: '#b7b7b7',
+        cursor: 'pointer',
+    },
+    tweetAuthorName: {
+        transition: 'color .2s ease',
+        '& b': {
+            color: '#fff',
+        },
+        '&:hover b': {
+            textDecoration: 'underline',
+        }
+    },
+    tweetAuthorNickname: {
         margin: '0 10px'
     },
     tweetTime: {
-        color: '#b7b7b7'
+        '&:hover': {
+            textDecoration: 'underline'
+        }
     },
-    tweetActions: {
+    tweetFooter: {
         display: 'flex',
         justifyContent: 'space-around',
+        '& span svg': {
+            fontSize: '.8em',
+        },
+        '& span span': {
+            fontSize: '.6em',
+            paddingLeft: '5px'
+        }
     },
     commentIcon: {},
     retweetIcon: {

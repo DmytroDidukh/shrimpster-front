@@ -3,11 +3,10 @@ import {Grid, Avatar, Typography} from "@material-ui/core";
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import LoopIcon from '@material-ui/icons/Loop';
+import RepeatIcon from '@material-ui/icons/Repeat';
+import IconButton from "@material-ui/core/IconButton";
 
 import tweetStyles from "./styles";
-import IconButton from "@material-ui/core/IconButton";
-import SearchIcon from "@material-ui/icons/Search";
 
 
 const Tweet: FC = (): ReactElement => {
@@ -21,25 +20,32 @@ const Tweet: FC = (): ReactElement => {
                 </Grid>
                 <Grid item>
                     <Typography className={classes.tweetHeader}>
-                        <b className={classes.tweetAuthorName}>Dmytro Didukh</b>
-                        <span className={classes.tweetAuthorNickname}>@dmytrodidukh</span>
-                        <span className={classes.tweetTime}>· 2h</span>
+                        <span className={classes.tweetAuthorName}>
+                                <b>Dmytro Didukh</b>
+                                <span className={classes.tweetAuthorNickname}>@dmytrodidukh </span>
+                        </span>
+                        {/*// @ts-ignore*/}
+                        <span className={classes.tweetTime} title={'12:07 AM * Feb 21, 2021'}>2h</span>
                     </Typography>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eaque eos laboriosam
+                    <Typography variant={"body1"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
+                        eaque eos laboriosam
                         nesciunt qui tempore vitae voluptas! A animi culpa, est inventore optio praesentium veritatis.
                         Aliquam enim fugit perferendis sequi?
-                    </div>
+                    </Typography>
                 </Grid>
             </Grid>
-            <div className={classes.tweetActions}>
+            <div className={classes.tweetFooter}>
                 <IconButton className={classes.commentIcon} title='Reply'>
                     <ChatBubbleOutlineIcon/>
+                    <span>1</span>
                 </IconButton>
                 <IconButton className={classes.retweetIcon} title='Retweet'>
-                    <LoopIcon/>
+                    <RepeatIcon/>
+                    <span>3</span>
                 </IconButton>
                 <IconButton className={classes.likeIcon} title='Like'>
                     <FavoriteBorderIcon/>
+                    <span>456</span>
                 </IconButton>
                 <IconButton className={classes.shareIcon} title='Share'>
                     <ShareOutlinedIcon/>
