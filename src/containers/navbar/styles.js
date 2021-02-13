@@ -23,7 +23,10 @@ const useStyles = makeStyles((theme) => ({
             }
         }
     },
-
+    tweetButton: {
+        margin: '0 auto',
+        display: 'block'
+    }
 }))
 
 export default useStyles;

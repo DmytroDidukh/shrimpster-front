@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.default,
         transition: 'background-color .2s ease',
         padding: 12,
+        marginBottom: '2px',
         '&:hover': {
             backgroundColor: theme.palette.background.darken,
         }

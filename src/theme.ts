@@ -82,10 +82,10 @@ const theme = createMuiTheme({
         MuiButtonBase: {
             root: {
                 color: '#fff',
-                '&:hover': {
+/*                '&:hover': {
                     backgroundColor: 'rgba(188,65,45,0.2)',
                     color: '#BC4123',
-                }
+                }*/
             }
         },
         MuiListItem: {

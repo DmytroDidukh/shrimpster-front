@@ -5,7 +5,8 @@ const useStyles = makeStyles((theme) => ({
         height: '100%',
     },
     mainTweetSection: {
-        padding: 0
+        padding: 0,
+        backgroundColor: '#bc412329'
     }
 }))
 

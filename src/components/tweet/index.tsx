@@ -8,30 +8,34 @@ import IconButton from "@material-ui/core/IconButton";
 
 import tweetStyles from "./styles";
 
+interface TweetProps {
+    user: {
+        fullName: string,
+        username: string,
+        avatarUrl: string
+    },
+    tweetText: string
+}
 
-const Tweet: FC = (): ReactElement => {
+const Tweet: FC<TweetProps> = ({user, tweetText}: TweetProps): ReactElement => {
     const classes = tweetStyles()
 
     return (
         <div className={classes.tweet}>
             <Grid container spacing={2} wrap='nowrap'>
                 <Grid item>
-                    <Avatar alt="Remy Sharp" src="https://stuki-druki.com/aforizms/Natalie-Portman-01.jpg"/>
+                    <Avatar alt="User Avatar" src={user.avatarUrl}/>
                 </Grid>
                 <Grid item>
                     <Typography className={classes.tweetHeader}>
                         <span className={classes.tweetAuthorName}>
-                                <b>Dmytro Didukh</b>
-                                <span className={classes.tweetAuthorNickname}>@dmytrodidukh </span>
+                                <b>{user.fullName}</b>
+                                <span className={classes.tweetAuthorNickname}>{user.username}</span>
                         </span>
                         {/*// @ts-ignore*/}
                         <span className={classes.tweetTime} title={'12:07 AM * Feb 21, 2021'}>2h</span>
                     </Typography>
-                    <Typography variant={"body1"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
-                        eaque eos laboriosam
-                        nesciunt qui tempore vitae voluptas! A animi culpa, est inventore optio praesentium veritatis.
-                        Aliquam enim fugit perferendis sequi?
-                    </Typography>
+                    <Typography variant={"body1"}>{tweetText}</Typography>
                 </Grid>
             </Grid>
             <div className={classes.tweetFooter}>
