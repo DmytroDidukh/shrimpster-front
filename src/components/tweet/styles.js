@@ -5,10 +5,22 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         position: 'relative',
         backgroundColor: theme.palette.background.default,
+        transition: 'background-color .2s ease',
         padding: 12,
         '&:hover': {
             backgroundColor: theme.palette.background.darken,
         }
+    },
+    tweetHeader: {
+        display: 'flex',
+    },
+    tweetAuthorName: {},
+    tweetAuthorNickname: {
+        color: '#b7b7b7',
+        margin: '0 10px'
+    },
+    tweetTime: {
+        color: '#b7b7b7'
     },
     tweetActions: {
         display: 'flex',

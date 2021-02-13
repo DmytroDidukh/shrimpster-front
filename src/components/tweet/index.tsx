@@ -20,7 +20,11 @@ const Tweet: FC = (): ReactElement => {
                     <Avatar alt="Remy Sharp" src="https://stuki-druki.com/aforizms/Natalie-Portman-01.jpg"/>
                 </Grid>
                 <Grid item>
-                    <Typography><b>@dmytrodidukh </b> 2h</Typography>
+                    <Typography className={classes.tweetHeader}>
+                        <b className={classes.tweetAuthorName}>Dmytro Didukh</b>
+                        <span className={classes.tweetAuthorNickname}>@dmytrodidukh</span>
+                        <span className={classes.tweetTime}>· 2h</span>
+                    </Typography>
                     <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eaque eos laboriosam
                         nesciunt qui tempore vitae voluptas! A animi culpa, est inventore optio praesentium veritatis.
                         Aliquam enim fugit perferendis sequi?
