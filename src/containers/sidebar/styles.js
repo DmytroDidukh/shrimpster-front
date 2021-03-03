@@ -26,7 +26,18 @@ const useStyles = makeStyles((theme) => ({
         height: 28,
         margin: 4,
     },
-
+    news: {
+        color: '#fff',
+        margin: theme.spacing(1),
+        padding: theme.spacing(1),
+        backgroundColor: theme.palette.background.darken,
+    },
+    toFollow: {
+        color: '#fff',
+        margin: theme.spacing(1),
+        padding: theme.spacing(1),
+        backgroundColor: theme.palette.background.darken,
+    }
 }))
 
 export default useStyles;
