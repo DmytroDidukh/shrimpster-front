@@ -1,10 +1,10 @@
-import React from 'react'
+import React, {ReactElement} from 'react'
 import {Grid, Container} from "@material-ui/core";
 
 import {Main, Navbar, Sidebar} from "../../containers";
 import homeStyles from './styles'
 
-const Home = () => {
+const Home = (): ReactElement => {
     const classes = homeStyles()
 
     return (

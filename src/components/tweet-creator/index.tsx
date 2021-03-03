@@ -1,4 +1,4 @@
-import React, {FC, ReactNode, ReactElement, useMemo} from "react";
+import React, {FC, ReactElement, useMemo} from "react";
 import {TextField, Grid, Avatar, IconButton, Button} from "@material-ui/core";
 import ImageOutlinedIcon from '@material-ui/icons/ImageOutlined';
 import EmojiEmotionsOutlinedIcon from '@material-ui/icons/EmojiEmotionsOutlined';
@@ -18,9 +18,7 @@ const TweetCreator: FC = (): ReactElement => {
     };
 
     const percentage = useMemo(() => {
-        console.log(value.length)
-        console.log(280 / value.length ? value.length : 1)
-        return 280 / value.length ? value.length : 1 || 0
+        return Math.round((value.length / 280) * 100) || 0
     }, [value])
 
     return (
@@ -55,34 +53,21 @@ const TweetCreator: FC = (): ReactElement => {
                                                      width: '30px'
 
                                                  },
-                                                 // Customize the path, i.e. the "completed progress"
                                                  path: {
-                                                     // Path color
-                                                     stroke: `rgba(188, 65, 35, ${percentage / 100})`,
-                                                     // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+                                                     stroke: percentage > 100 ? 'red' : `#BC4123`,
                                                      strokeLinecap: 'butt',
-                                                     // Customize transition animation
                                                      transition: 'stroke-dashoffset 0.5s ease 0s',
-                                                     // Rotate the path
                                                      transformOrigin: 'center center',
                                                  },
-                                                 // Customize the circle behind the path, i.e. the "total progress"
                                                  trail: {
-                                                     // Trail color
                                                      stroke: '#d6d6d6',
-                                                     // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
                                                      strokeLinecap: 'butt',
-                                                     // Rotate the trail
                                                      transformOrigin: 'center center',
                                                  },
-                                                 // Customize the text
                                                  text: {
-                                                     // Text color
-                                                     fill: '#f88',
-                                                     // Text size
+                                                     fill: percentage > 100 ? 'red' : `#BC4123`,
                                                      fontSize: '25px',
                                                  },
-                                                 // Customize background - only used when the `background` prop is true
                                                  background: {
                                                      fill: '#3e98c7',
                                                  },
